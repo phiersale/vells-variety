@@ -7,7 +7,7 @@ Next.js, a database, a build command, or paid hosting.
 
 - `index.html` — webpage content
 - `styles.css` — layout, colors, typography, and mobile styling
-- `images/` — store photographs
+- `*.jpg` — store photographs, kept beside `index.html` at the repository root
 - `favicon.svg` — browser icon
 - `.nojekyll` — tells GitHub Pages to publish these files unchanged
 
@@ -17,7 +17,7 @@ Next.js, a database, a build command, or paid hosting.
 2. Name it `vells-variety`.
 3. Open the repository and choose **Add file → Upload files**.
 4. Upload the **contents of this folder**, not the ZIP itself. `index.html`
-   must appear at the top level of the repository.
+   and all `.jpg` files must appear at the top level of the repository.
 5. Commit the files.
 6. Open **Settings → Pages**.
 7. Under **Build and deployment**, choose **Deploy from a branch**.

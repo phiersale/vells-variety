@@ -76,7 +76,26 @@ h1 { font-size: clamp(58px, 8vw, 104px); line-height: .9; margin: 0; }
 .category-card img { height: 100%; object-fit: cover; transition: transform .6s ease; }
 .category-card:hover img { transform: scale(1.04); }
 .category-overlay { background: linear-gradient(transparent 45%, rgba(22,15,10,.82)); inset: 0; position: absolute; }
-.category-card h3 { bottom: 28px; color: white; font-family: Georgia, serif; font-size: 25px; font-weight: 500; left: 26px; margin: 0; position: absolute; right: 20px; }
+.category-label { bottom: 26px; color: white; left: 26px; position: absolute; right: 20px; }
+.category-label small, .find-card small { color: #e6bd80; display: block; font-size: 9px; font-weight: 900; letter-spacing: .17em; margin-bottom: 8px; text-transform: uppercase; }
+.category-card h3 { font-family: Georgia, serif; font-size: 25px; font-weight: 500; margin: 0; }
+
+.more-finds { background: #f3ecdf; padding: 100px clamp(18px, 5vw, 76px) 110px; }
+.section-heading { margin: 0 auto 54px; max-width: 760px; text-align: center; }
+.section-heading h2 { font-size: clamp(40px, 5vw, 67px); line-height: 1.03; margin: 0 0 22px; }
+.section-heading > p:last-child { color: #70665e; font-size: 17px; line-height: 1.75; margin: 0 auto; max-width: 620px; }
+.finds-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 auto; max-width: 1180px; }
+.find-card { background: #211914; height: 390px; margin: 0; overflow: hidden; position: relative; }
+.find-card-wide { height: 470px; }
+.find-card img { height: 100%; object-fit: cover; transition: transform .6s ease; }
+.find-card:nth-child(1) img { object-position: center 46%; }
+.find-card:nth-child(2) img { object-position: center 38%; }
+.find-card:nth-child(3) img { object-position: center 42%; }
+.find-card:nth-child(4) img { object-position: center 34%; }
+.find-card:hover img { transform: scale(1.035); }
+.find-card::after { background: linear-gradient(transparent 50%, rgba(20,13,9,.88)); content: ""; inset: 0; position: absolute; }
+.find-card figcaption { bottom: 25px; color: white; left: 27px; position: absolute; right: 24px; z-index: 1; }
+.find-card strong { display: block; font-family: Georgia, serif; font-size: 27px; font-weight: 500; }
 
 .visit { background: var(--ink); color: white; display: grid; grid-template-columns: 1.08fr .92fr; }
 .visit-photo { min-height: 620px; }
@@ -102,6 +121,7 @@ footer .copyright { color: #736963; font-family: Arial, sans-serif; font-size: 1
   .category-card { height: 380px; }
   .visit { grid-template-columns: 1fr; }
   .visit-photo { min-height: 450px; }
+  .find-card, .find-card-wide { height: 390px; }
 }
 
 @media (max-width: 600px) {
@@ -122,7 +142,16 @@ footer .copyright { color: #736963; font-family: Arial, sans-serif; font-size: 1
   .intro h2, .visit h2 { font-size: 41px; }
   .category-grid { gap: 5px; padding: 0 5px 75px; }
   .category-card { height: 285px; }
-  .category-card h3 { bottom: 18px; font-size: 19px; left: 16px; }
+  .category-label { bottom: 17px; left: 16px; right: 12px; }
+  .category-label small { font-size: 8px; margin-bottom: 5px; }
+  .category-card h3 { font-size: 19px; }
+  .more-finds { padding: 72px 5px 76px; }
+  .section-heading { padding: 0 18px; }
+  .finds-grid { gap: 5px; }
+  .find-card, .find-card-wide { height: 300px; }
+  .find-card figcaption { bottom: 17px; left: 16px; right: 12px; }
+  .find-card strong { font-size: 20px; }
+  .find-card small { font-size: 8px; margin-bottom: 5px; }
   .visit-photo { min-height: 370px; }
   .visit-copy { padding: 58px 24px 70px; }
   footer { padding-bottom: 112px; }
