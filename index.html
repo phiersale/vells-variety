@@ -111,7 +111,17 @@
         font-weight: 700;
       }
       
-      /* Location Alert */
+      .announcement-content a {
+        color: #9e4e32;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+      
+      .announcement-content a:hover {
+        color: #7d3d27;
+      }
+      
+      /* Location Alert - UPDATED with new message */
       .location-alert {
         background: #171512;
         color: #f0e6d8;
@@ -234,6 +244,16 @@
         transform: scale(1.02);
       }
       
+      .button-ebay {
+        background: #0066d9;
+        color: #fff;
+      }
+      
+      .button-ebay:hover {
+        background: #0052b3;
+        transform: scale(1.02);
+      }
+      
       /* Intro */
       .intro {
         padding: 2.5rem 1.5rem;
@@ -317,6 +337,24 @@
         padding: 2rem 1.5rem 3rem;
         max-width: 1200px;
         margin: 0 auto;
+      }
+      
+      .section-heading {
+        max-width: 700px;
+        margin: 0 auto 1.5rem;
+        text-align: center;
+      }
+      
+      .section-heading h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+      
+      .section-heading p {
+        color: #555;
+        font-size: 1rem;
       }
       
       .finds-grid {
@@ -407,6 +445,10 @@
         color: #7d3d27;
       }
       
+      .ebay-feed .browse-btn {
+        margin-top: 0.5rem;
+      }
+      
       /* eBay widget container - style the embedded feed */
       #ebay-items {
         text-align: left;
@@ -437,58 +479,6 @@
       
       #ebay-items a:hover {
         text-decoration: underline;
-      }
-      
-      .ebay-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1.5rem;
-        margin-top: 1.5rem;
-      }
-      
-      .ebay-item {
-        background: #fff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        padding: 0.5rem;
-      }
-      
-      .ebay-item:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-      }
-      
-      .ebay-item img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 8px;
-      }
-      
-      .ebay-item .item-info {
-        padding: 0.75rem 0.25rem 0.25rem;
-      }
-      
-      .ebay-item .item-info a {
-        color: #1a1a1a;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.9rem;
-        display: block;
-        line-height: 1.3;
-      }
-      
-      .ebay-item .item-info a:hover {
-        color: #9e4e32;
-      }
-      
-      .ebay-item .item-price {
-        font-weight: 700;
-        color: #9e4e32;
-        margin-top: 0.25rem;
-        font-size: 1rem;
       }
       
       /* Visit Section */
@@ -678,13 +668,6 @@
         .finds-grid {
           grid-template-columns: 1fr 1fr;
         }
-        .ebay-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
-        }
-        .ebay-item img {
-          height: 140px;
-        }
         .ebay-feed h2 {
           font-size: 1.6rem;
         }
@@ -708,12 +691,14 @@
       <aside class="announcement-banner" aria-label="Important announcement about buying local">
         <div class="announcement-content">
           <p><strong>⭐ Buy from Vell's Variety, not eBay!</strong></p>
-          <p>See something you like on our eBay store? <strong>Call or message us</strong> and we'll bring it to the store for you. <strong>Save money, save on shipping, and get it faster!</strong></p>
+          <p>See something you like on our <a href="https://www.ebay.com/usr/marvell1117" target="_blank" rel="noreferrer">eBay store</a>? <strong>Call or message us</strong> and we'll bring it to the store for you. <strong>Save money, save on shipping, and get it faster!</strong></p>
         </div>
       </aside>
 
-      <aside class="location-alert" aria-label="Temporary location notice">
-        <strong>This location only through Wednesday, July 29</strong>
+      <!-- Location Alert - UPDATED with new message -->
+      <aside class="location-alert" aria-label="Location announcement">
+        <strong>🎉 Great News!</strong>
+        <span>By popular demand, we'll be at this location through the end of August!</span>
         <span>Open 7 days a week · 10 AM–6 PM</span>
       </aside>
 
@@ -804,13 +789,18 @@
         </div>
       </section>
 
-      <!-- EBAY FEED SECTION - Moved here, before the Visit section -->
+      <!-- EBAY FEED SECTION -->
       <section class="ebay-feed">
         <h2>Browse Our Full Catalog on eBay</h2>
         <p class="subtitle">See everything we have — then buy it in-store and save!</p>
         
         <div class="callout">
-          ⭐ <strong>See something you like?</strong> Call us at <a href="tel:+19164101976">(916) 410-1976</a> or message us on eBay and we'll bring it to the store for you. <strong>You save on shipping and get it faster!</strong>
+          ⭐ <strong>See something you like?</strong> Call us at <a href="tel:+19164101976">(916) 410-1976</a> or message us on <a href="https://www.ebay.com/usr/marvell1117" target="_blank" rel="noreferrer">eBay</a> and we'll bring it to the store for you. <strong>You save on shipping and get it faster!</strong>
+        </div>
+
+        <!-- Big "Browse eBay Store" Button -->
+        <div class="browse-btn">
+          <a class="button button-ebay" href="https://www.ebay.com/usr/marvell1117" target="_blank" rel="noreferrer">🛒 Browse Our eBay Store</a>
         </div>
 
         <!-- eBay Widget Embed -->
@@ -818,11 +808,12 @@
         <script src="https://rss.ebay.com/rssfeed/seller?sid=marvell1117&format=html"></script>
         
         <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #777;">
-          Inventory changes daily — there's always something new to discover!
+          Inventory changes daily — there's always something new to discover! 
+          <a href="https://www.ebay.com/usr/marvell1117" target="_blank" rel="noreferrer" style="color:#9e4e32; font-weight:600;">Visit our eBay store →</a>
         </p>
       </section>
 
-      <!-- VISIT / SHOP LOCAL SECTION - Now comes after the eBay feed -->
+      <!-- VISIT / SHOP LOCAL SECTION -->
       <section class="visit">
         <div class="visit-photo">
           <img src="finds.jpg" alt="A selection of merchandise at Vell's Variety" />
@@ -836,7 +827,7 @@
           </address>
           <div class="store-notice">
             <strong>Open daily, 10 AM–6 PM</strong>
-            <span>This location only through Wednesday, July 29</span>
+            <span>📍 Extended through the end of August!</span>
           </div>
           <a class="phone" href="tel:+19164101976">(916) 410-1976</a>
           <div class="visit-actions">
