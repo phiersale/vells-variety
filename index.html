@@ -368,98 +368,7 @@
         }
       }
       
-      /* Visit Section */
-      .visit {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        padding: 2rem 1.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-        background: #f9f6f0;
-        border-radius: 16px;
-      }
-      
-      .visit-photo img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 12px;
-      }
-      
-      .visit-copy {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.75rem;
-      }
-      
-      .visit-copy h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 1.2;
-      }
-      
-      .visit-copy address {
-        font-style: normal;
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-      
-      .store-notice {
-        background: #ede5dc;
-        padding: 0.75rem 1rem;
-        border-radius: 8px;
-        font-size: 0.9rem;
-      }
-      
-      .store-notice strong {
-        display: block;
-        font-weight: 700;
-      }
-      
-      .phone {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #9e4e32;
-        text-decoration: none;
-      }
-      
-      .phone:hover {
-        text-decoration: underline;
-      }
-      
-      .visit-actions {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 0.75rem;
-        margin-top: 0.5rem;
-      }
-      
-      .text-link {
-        color: #9e4e32;
-        font-weight: 600;
-        text-decoration: none;
-      }
-      
-      .text-link:hover {
-        text-decoration: underline;
-      }
-      
-      @media (max-width: 700px) {
-        .visit {
-          grid-template-columns: 1fr;
-        }
-        .visit-photo {
-          order: -1;
-        }
-        .visit-photo img {
-          max-height: 240px;
-        }
-      }
-      
-      /* eBay Feed Section - NEW */
+      /* eBay Feed Section */
       .ebay-feed {
         padding: 3rem 1.5rem;
         max-width: 1200px;
@@ -582,6 +491,97 @@
         font-size: 1rem;
       }
       
+      /* Visit Section */
+      .visit {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #f9f6f0;
+        border-radius: 16px;
+      }
+      
+      .visit-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      
+      .visit-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+      
+      .visit-copy h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      
+      .visit-copy address {
+        font-style: normal;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      
+      .store-notice {
+        background: #ede5dc;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+      
+      .store-notice strong {
+        display: block;
+        font-weight: 700;
+      }
+      
+      .phone {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #9e4e32;
+        text-decoration: none;
+      }
+      
+      .phone:hover {
+        text-decoration: underline;
+      }
+      
+      .visit-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+      
+      .text-link {
+        color: #9e4e32;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      
+      .text-link:hover {
+        text-decoration: underline;
+      }
+      
+      @media (max-width: 700px) {
+        .visit {
+          grid-template-columns: 1fr;
+        }
+        .visit-photo {
+          order: -1;
+        }
+        .visit-photo img {
+          max-height: 240px;
+        }
+      }
+      
       /* Footer */
       footer {
         background: #171512;
@@ -684,6 +684,9 @@
         }
         .ebay-item img {
           height: 140px;
+        }
+        .ebay-feed h2 {
+          font-size: 1.6rem;
         }
       }
     </style>
@@ -801,6 +804,25 @@
         </div>
       </section>
 
+      <!-- EBAY FEED SECTION - Moved here, before the Visit section -->
+      <section class="ebay-feed">
+        <h2>Browse Our Full Catalog on eBay</h2>
+        <p class="subtitle">See everything we have — then buy it in-store and save!</p>
+        
+        <div class="callout">
+          ⭐ <strong>See something you like?</strong> Call us at <a href="tel:+19164101976">(916) 410-1976</a> or message us on eBay and we'll bring it to the store for you. <strong>You save on shipping and get it faster!</strong>
+        </div>
+
+        <!-- eBay Widget Embed -->
+        <div id="ebay-items"></div>
+        <script src="https://rss.ebay.com/rssfeed/seller?sid=marvell1117&format=html"></script>
+        
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #777;">
+          Inventory changes daily — there's always something new to discover!
+        </p>
+      </section>
+
+      <!-- VISIT / SHOP LOCAL SECTION - Now comes after the eBay feed -->
       <section class="visit">
         <div class="visit-photo">
           <img src="finds.jpg" alt="A selection of merchandise at Vell's Variety" />
@@ -822,24 +844,6 @@
             <a class="text-link" href="tel:+19164101976">Call before you visit →</a>
           </div>
         </div>
-      </section>
-
-      <!-- EBAY FEED SECTION - Now at the bottom -->
-      <section class="ebay-feed">
-        <h2>Browse Our Full Catalog on eBay</h2>
-        <p class="subtitle">See everything we have — then buy it in-store and save!</p>
-        
-        <div class="callout">
-          ⭐ <strong>See something you like?</strong> Call us at <a href="tel:+19164101976">(916) 410-1976</a> or message us on eBay and we'll bring it to the store for you. <strong>You save on shipping and get it faster!</strong>
-        </div>
-
-        <!-- eBay Widget Embed -->
-        <div id="ebay-items"></div>
-        <script src="https://rss.ebay.com/rssfeed/seller?sid=marvell1117&format=html"></script>
-        
-        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #777;">
-          Inventory changes daily — there's always something new to discover!
-        </p>
       </section>
 
       <footer>
