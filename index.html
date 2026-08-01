@@ -11,7 +11,649 @@
     <meta property="og:type" content="website" />
     <title>Vell's Variety | Sacramento</title>
     <link rel="icon" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    
+    <style>
+      /* --- ALL STYLES INCLUDED HERE --- */
+      
+      /* Reset & Base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: #fcf9f5;
+        color: #1a1a1a;
+        line-height: 1.5;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      /* Topbar */
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1.5rem;
+        background: #fff;
+        border-bottom: 1px solid #e5ddd5;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      
+      .wordmark {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: #1a1a1a;
+      }
+      
+      .wordmark span {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #9e4e32;
+        background: #ede5dc;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+      }
+      
+      .wordmark div {
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+      
+      .wordmark small {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: #666;
+      }
+      
+      .header-call {
+        color: #9e4e32;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+      }
+      
+      .header-call:hover {
+        text-decoration: underline;
+      }
+      
+      /* Announcement Banner */
+      .announcement-banner {
+        background: #f5c542;
+        color: #1a1a1a;
+        padding: 0.75rem 1.5rem;
+        text-align: center;
+        border-bottom: 2px solid #d4a832;
+      }
+      
+      .announcement-content p {
+        margin: 0.1rem 0;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+      }
+      
+      .announcement-content strong {
+        font-weight: 700;
+      }
+      
+      /* Location Alert */
+      .location-alert {
+        background: #171512;
+        color: #f0e6d8;
+        padding: 0.6rem 1.5rem;
+        text-align: center;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+      }
+      
+      .location-alert strong {
+        color: #f5c542;
+      }
+      
+      /* Hero */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background: #171512;
+      }
+      
+      .hero-image {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+        object-fit: cover;
+        opacity: 0.7;
+      }
+      
+      .hero-shade {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(23, 21, 18, 0.8) 20%, transparent 70%);
+      }
+      
+      .hero-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem 1.5rem 2.5rem;
+        color: #fff;
+        max-width: 700px;
+      }
+      
+      .eyebrow {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #d4b8a0;
+        margin-bottom: 0.25rem;
+      }
+      
+      .eyebrow.dark {
+        color: #9e7a64;
+      }
+      
+      .hero-content h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+      }
+      
+      .hero-copy {
+        font-size: 1rem;
+        opacity: 0.9;
+        max-width: 500px;
+        margin-bottom: 1.25rem;
+      }
+      
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      
+      .button {
+        display: inline-block;
+        padding: 0.7rem 1.6rem;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: background 0.2s ease, transform 0.1s ease;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .button-primary {
+        background: #f5c542;
+        color: #1a1a1a;
+      }
+      
+      .button-primary:hover {
+        background: #e0b038;
+        transform: scale(1.02);
+      }
+      
+      .button-secondary {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+      }
+      
+      .button-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #fff;
+      }
+      
+      .button-gold {
+        background: #f5c542;
+        color: #1a1a1a;
+      }
+      
+      .button-gold:hover {
+        background: #e0b038;
+        transform: scale(1.02);
+      }
+      
+      /* How It Works Section */
+      .how-it-works {
+        padding: 3rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .section-heading {
+        max-width: 700px;
+        margin: 0 auto 1.5rem;
+        text-align: center;
+      }
+      
+      .section-heading h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+      
+      .section-heading p {
+        color: #555;
+        font-size: 1rem;
+      }
+      
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-top: 2.5rem;
+      }
+      
+      .step-card {
+        background: #f9f6f0;
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      }
+      
+      .step-number {
+        display: inline-block;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #9e4e32;
+        background: #ede5dc;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+      
+      .step-card h3 {
+        font-size: 1.3rem;
+        margin: 0.5rem 0 0.75rem;
+        font-weight: 600;
+      }
+      
+      .step-card p {
+        font-size: 0.95rem;
+        color: #444;
+        margin-bottom: 1.25rem;
+      }
+      
+      .step-card .button {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        background: #9e4e32;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        transition: background 0.2s ease;
+      }
+      
+      .step-card .button:hover {
+        background: #7d3d27;
+      }
+      
+      /* Intro */
+      .intro {
+        padding: 2.5rem 1.5rem;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .intro h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+      }
+      
+      .intro p {
+        color: #555;
+        font-size: 1rem;
+      }
+      
+      /* Category Grid */
+      .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        padding: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .category-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        aspect-ratio: 1 / 1;
+        background: #171512;
+      }
+      
+      .category-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      .category-card:hover img {
+        transform: scale(1.05);
+      }
+      
+      .category-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, transparent 60%);
+      }
+      
+      .category-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1.5rem 1rem 1rem;
+        color: #fff;
+      }
+      
+      .category-label small {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        opacity: 0.8;
+      }
+      
+      .category-label h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 0.1rem;
+      }
+      
+      /* More Finds */
+      .more-finds {
+        padding: 2rem 1.5rem 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .finds-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+      
+      .find-card {
+        margin: 0;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #f9f6f0;
+        position: relative;
+      }
+      
+      .find-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+      
+      .find-card figcaption {
+        padding: 0.75rem 1rem;
+        background: #f9f6f0;
+      }
+      
+      .find-card figcaption small {
+        display: block;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #9e7a64;
+      }
+      
+      .find-card figcaption strong {
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+      
+      .find-card-wide {
+        grid-column: span 2;
+      }
+      
+      @media (max-width: 600px) {
+        .find-card-wide {
+          grid-column: span 1;
+        }
+      }
+      
+      /* Visit Section */
+      .visit {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #f9f6f0;
+        border-radius: 16px;
+      }
+      
+      .visit-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      
+      .visit-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+      
+      .visit-copy h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      
+      .visit-copy address {
+        font-style: normal;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      
+      .store-notice {
+        background: #ede5dc;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+      
+      .store-notice strong {
+        display: block;
+        font-weight: 700;
+      }
+      
+      .phone {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #9e4e32;
+        text-decoration: none;
+      }
+      
+      .phone:hover {
+        text-decoration: underline;
+      }
+      
+      .visit-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+      
+      .text-link {
+        color: #9e4e32;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      
+      .text-link:hover {
+        text-decoration: underline;
+      }
+      
+      @media (max-width: 700px) {
+        .visit {
+          grid-template-columns: 1fr;
+        }
+        .visit-photo {
+          order: -1;
+        }
+        .visit-photo img {
+          max-height: 240px;
+        }
+      }
+      
+      /* Footer */
+      footer {
+        background: #171512;
+        color: #d4c8bc;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      
+      .footer-mark {
+        justify-content: center;
+        margin-bottom: 0.75rem;
+      }
+      
+      .footer-mark span {
+        background: #9e4e32;
+        color: #fff;
+      }
+      
+      .footer-mark div {
+        color: #fff;
+      }
+      
+      footer p {
+        font-size: 0.95rem;
+        margin: 0.2rem 0;
+      }
+      
+      .copyright {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin-top: 0.5rem;
+      }
+      
+      /* Mobile Actions */
+      .mobile-actions {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: 1px solid #e5ddd5;
+        padding: 0.6rem 1rem;
+        justify-content: space-around;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+        z-index: 100;
+      }
+      
+      .mobile-actions a {
+        text-decoration: none;
+        font-weight: 600;
+        color: #9e4e32;
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        background: #f5f0eb;
+        font-size: 0.9rem;
+      }
+      
+      .mobile-actions a:hover {
+        background: #ede5dc;
+      }
+      
+      @media (max-width: 600px) {
+        .mobile-actions {
+          display: flex;
+        }
+        body {
+          padding-bottom: 70px;
+        }
+        .topbar {
+          flex-direction: column;
+          align-items: stretch;
+          text-align: center;
+          gap: 0.25rem;
+        }
+        .wordmark {
+          justify-content: center;
+        }
+        .hero-content h1 {
+          font-size: 1.8rem;
+        }
+        .hero-content {
+          padding: 1.5rem 1rem 2rem;
+        }
+        .announcement-content p {
+          font-size: 0.9rem;
+        }
+        .steps-grid {
+          grid-template-columns: 1fr;
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .category-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.75rem;
+          padding: 0.75rem;
+        }
+        .finds-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .section-heading h2 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -26,8 +668,16 @@
         <a class="header-call" href="tel:+19164101976">Call (916) 410-1976</a>
       </header>
 
+      <!-- Announcement Banner -->
+      <aside class="announcement-banner" aria-label="Important announcement about buying local">
+        <div class="announcement-content">
+          <p><strong>⭐ Buy from Vell's Variety, not eBay!</strong></p>
+          <p>See something you like on our eBay store? <strong>Call or message us</strong> and we'll bring it to the store for you. <strong>Save money, save on shipping, and get it faster!</strong></p>
+        </div>
+      </aside>
+
       <aside class="location-alert" aria-label="Temporary location notice">
-        <strong>Spread the word - At this location through August</strong>
+        <strong>This location only through Wednesday, July 29</strong>
         <span>Open 7 days a week · 10 AM–6 PM</span>
       </aside>
 
@@ -48,6 +698,34 @@
         </div>
       </section>
 
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow dark">Browse our full catalog</p>
+          <h2>See it on eBay.<br />Buy it here for less.</h2>
+          <p>Our inventory is always changing, so there's never a dull moment! Browse our eBay store to see what's available, then contact us to purchase directly at our physical location.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Browse our eBay Store</h3>
+            <p>See our full selection of clothing, jewelry, home goods, electronics, and more. New items are added all the time!</p>
+            <a class="button" href="https://www.ebay.com/usr/marvell1117" target="_blank" rel="noreferrer">Visit Our eBay Store →</a>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Contact Us</h3>
+            <p>Call us at <a href="tel:+19164101976" style="color:#9e4e32; font-weight:600;">(916) 410-1976</a> or send us a message on eBay to let us know what you're interested in.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Pick It Up at the Store</h3>
+            <p>We'll bring your item to our Freeport Blvd location for you. You save on shipping costs and get it right away!</p>
+          </div>
+        </div>
+      </section>
+
       <section class="intro">
         <p class="eyebrow dark">Come see what's new</p>
         <h2>A little bit of everything.<br />A new find every visit.</h2>
@@ -60,7 +738,7 @@
 
       <section class="category-grid" aria-label="Store departments">
         <article class="category-card">
-          <img src="jewelry3.jpg" alt="Necklaces, rings and bracelets displayed at Vell's Variety" />
+          <img src="jewelry.jpg" alt="Necklaces, rings and bracelets displayed at Vell's Variety" />
           <div class="category-overlay"></div>
           <div class="category-label"><small>Wear it your way</small><h3>Jewelry &amp; accessories</h3></div>
         </article>
@@ -70,9 +748,9 @@
           <div class="category-label"><small>Useful everyday upgrades</small><h3>Home &amp; personal care</h3></div>
         </article>
         <article class="category-card">
-          <img src="supplies.jpg" alt="Pet beds, training pads and pet accessories" />
+          <img src="pets.jpg" alt="Pet beds, training pads and pet accessories" />
           <div class="category-overlay"></div>
-          <div class="category-label"><small>For Households</small><h3>Supplies</h3></div>
+          <div class="category-label"><small>For four-legged family</small><h3>Pet goods</h3></div>
         </article>
         <article class="category-card">
           <img src="accessories.jpg" alt="Phone accessories, beauty items and useful small goods" />
@@ -131,7 +809,7 @@
           </address>
           <div class="store-notice">
             <strong>Open daily, 10 AM–6 PM</strong>
-            <span>>At this location through the end of August</span>
+            <span>This location only through Wednesday, July 29</span>
           </div>
           <a class="phone" href="tel:+19164101976">(916) 410-1976</a>
           <div class="visit-actions">
