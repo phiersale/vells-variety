@@ -121,7 +121,7 @@
         color: #7d3d27;
       }
       
-      /* Location Alert - UPDATED with new message */
+      /* Location Alert */
       .location-alert {
         background: #171512;
         color: #f0e6d8;
@@ -560,6 +560,26 @@
         text-decoration: underline;
       }
       
+      /* Inventory Notice - NEW centered section */
+      .inventory-notice {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      
+      .inventory-notice h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+      
+      .inventory-notice p {
+        color: #555;
+        font-size: 1rem;
+      }
+      
       @media (max-width: 700px) {
         .visit {
           grid-template-columns: 1fr;
@@ -671,6 +691,9 @@
         .ebay-feed h2 {
           font-size: 1.6rem;
         }
+        .inventory-notice h2 {
+          font-size: 1.6rem;
+        }
       }
     </style>
   </head>
@@ -695,7 +718,7 @@
         </div>
       </aside>
 
-      <!-- Location Alert - UPDATED with new message -->
+      <!-- Location Alert -->
       <aside class="location-alert" aria-label="Location announcement">
         <strong>🎉 Great News!</strong>
         <span>By popular demand, we'll be at this location through the end of August!</span>
@@ -782,11 +805,13 @@
             <img src="stationery.jpg" alt="Stationery, candles, gift items and gadgets" />
             <figcaption><small>For work, gifts and home</small><strong>Stationery &amp; little extras</strong></figcaption>
           </figure>
-          <figure class="find-card find-card-wide">
-            <img src="finds.jpg" alt="Candles, gift sets, cameras and assorted useful finds" />
-            <figcaption><small>The variety changes often</small><strong>Gifts, gadgets &amp; useful finds</strong></figcaption>
-          </figure>
         </div>
+      </section>
+
+      <!-- NEW: Centered Inventory Notice (replaces the standalone image) -->
+      <section class="inventory-notice">
+        <h2>🎁 Gifts, Gadgets &amp; Useful Finds</h2>
+        <p>The variety changes often — there's always something new to discover!</p>
       </section>
 
       <!-- EBAY FEED SECTION -->
