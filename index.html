@@ -580,6 +580,22 @@
         font-size: 1rem;
       }
       
+      /* NEW: Image block for Vells_Variety_Store.jpg */
+      .storefront-image {
+        max-width: 1000px;
+        margin: 1.5rem auto;
+        padding: 0 1.5rem;
+        border-radius: 16px;
+        overflow: hidden;
+      }
+      .storefront-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        display: block;
+      }
+      
       @media (max-width: 700px) {
         .visit {
           grid-template-columns: 1fr;
@@ -813,6 +829,11 @@
         <h2>🎁 Gifts, Gadgets &amp; Useful Finds</h2>
         <p>The variety changes often — there's always something new to discover!</p>
       </section>
+
+      <!-- ★ ADDED: storefront image in the right spot (after inventory notice, before eBay feed) ★ -->
+      <div class="storefront-image">
+        <img src="Vells_Variety_Store.jpg" alt="Vell's Variety Storefront on Freeport Boulevard in Sacramento" />
+      </div>
 
       <!-- EBAY FEED SECTION -->
       <section class="ebay-feed">
