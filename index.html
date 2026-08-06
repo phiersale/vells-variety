@@ -580,20 +580,159 @@
         font-size: 1rem;
       }
       
-      /* NEW: Image block for Vells_Variety_Store.jpg */
-      .storefront-image {
+      /* Storefront Image with Overlay */
+      .storefront-wrapper {
+        position: relative;
         max-width: 1000px;
         margin: 1.5rem auto;
-        padding: 0 1.5rem;
         border-radius: 16px;
         overflow: hidden;
-      }
-      .storefront-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 16px;
         box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      }
+      
+      .storefront-wrapper img {
+        width: 100%;
         display: block;
+      }
+      
+      .storefront-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem 1.5rem 1.75rem;
+        background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%);
+      }
+      
+      .storefront-overlay .tag {
+        display: inline-block;
+        background: #f5c542;
+        color: #1a1a1a;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 0.2rem 0.75rem;
+        border-radius: 20px;
+        margin-bottom: 0.5rem;
+      }
+      
+      .storefront-overlay h3 {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: 0 0 0.25rem 0;
+        line-height: 1.2;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      }
+      
+      .storefront-overlay h3 span {
+        color: #f5c542;
+      }
+      
+      .storefront-overlay p {
+        color: rgba(255,255,255,0.9);
+        font-size: 0.95rem;
+        margin: 0;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+      }
+      
+      .storefront-overlay .sub {
+        color: rgba(255,255,255,0.6);
+        font-size: 0.8rem;
+        margin-top: 0.4rem;
+        font-style: italic;
+      }
+      
+      @media (max-width: 600px) {
+        .storefront-overlay {
+          padding: 1.25rem 1rem 1.25rem;
+        }
+        .storefront-overlay h3 {
+          font-size: 1.1rem;
+        }
+        .storefront-overlay p {
+          font-size: 0.85rem;
+        }
+      }
+      
+      /* Visit Section */
+      .visit {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        background: #f9f6f0;
+        border-radius: 16px;
+      }
+      
+      .visit-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      
+      .visit-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+      
+      .visit-copy h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      
+      .visit-copy address {
+        font-style: normal;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      
+      .store-notice {
+        background: #ede5dc;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+      
+      .store-notice strong {
+        display: block;
+        font-weight: 700;
+      }
+      
+      .phone {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #9e4e32;
+        text-decoration: none;
+      }
+      
+      .phone:hover {
+        text-decoration: underline;
+      }
+      
+      .visit-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+      }
+      
+      .text-link {
+        color: #9e4e32;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      
+      .text-link:hover {
+        text-decoration: underline;
       }
       
       @media (max-width: 700px) {
@@ -824,15 +963,21 @@
         </div>
       </section>
 
-      <!-- NEW: Centered Inventory Notice (replaces the standalone image) -->
+      <!-- NEW: Centered Inventory Notice -->
       <section class="inventory-notice">
         <h2>🎁 Gifts, Gadgets &amp; Useful Finds</h2>
         <p>The variety changes often — there's always something new to discover!</p>
       </section>
 
-      <!-- ★ ADDED: storefront image in the right spot (after inventory notice, before eBay feed) ★ -->
-      <div class="storefront-image">
-        <img src="Vells_Variety_Store.jpg" alt="Vell's Variety Storefront on Freeport Boulevard in Sacramento" />
+      <!-- ★ STOREFRONT IMAGE WITH OVERLAY ★ -->
+      <div class="storefront-wrapper">
+        <img src="Vells_Variety_Store.jpg" alt="Vell's Variety storefront on Freeport Boulevard - enter under the chiropractor sign" />
+        <div class="storefront-overlay">
+          <span class="tag">📍 How to find us</span>
+          <h3>Enter through the <span>CHIROPRACTOR</span> door</h3>
+          <p>We're inside Vell's Variety — keeping this space alive 💛</p>
+          <p class="sub">🚗 (That's the owner's car — he's always here!)</p>
+        </div>
       </div>
 
       <!-- EBAY FEED SECTION -->
