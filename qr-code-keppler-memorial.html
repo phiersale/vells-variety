@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+            font-family: system-ui, sans-serif;
+        }
+        #qr-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        #qr-code {
+            display: block;
+            width: 600px;
+            height: 600px;
+            image-rendering: pixelated; /* Keep edges sharp */
+        }
+        .instructions {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .instructions button {
+            background: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        .instructions button:hover {
+            background: #333;
+        }
+        a {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="qr-container">
+        <!-- QR code will be rendered here -->
+        <div id="qr-code"></div>
+    </div>
+
+    <div class="instructions">
+        <p><strong>✓ Print‑ready QR code</strong><br>
+        600×600px · Black on white · No logo or frame</p>
+        <button id="download-btn">⬇ Download as PNG</button>
+        <p style="font-size:0.85rem; color:#555; margin-top:0.5rem;">
+            The QR code links to:<br>
+            <a href="https://phiersale.github.io/vells-variety/keppler-memorial.html" target="_blank">
+                phiersale.github.io/vells-variety/keppler-memorial.html
+            </a>
+        </p>
+    </div>
+
+    <!-- QRCode.js library from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        (function() {
+            // --- Configuration ---
+            const QR_URL = "https://phiersale.github.io/vells-variety/keppler-memorial.html";
+            const SIZE = 600;          // 600x600 pixels
+            const CORRECTION = 'H';    // High error correction (print-safe)
+
+            // --- 1. Generate the QR code ---
+            const qrContainer = document.getElementById('qr-code');
+            const qr = new QRCode(qrContainer, {
+                text: QR_URL,
+                width: SIZE,
+                height: SIZE,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            // --- 2. Download as PNG function ---
+            document.getElementById('download-btn').addEventListener('click', function() {
+                // Find the canvas element created by QRCode.js
+                const canvas = qrContainer.querySelector('canvas');
+                if (!canvas) {
+                    alert('QR code canvas not found. Please try again.');
+                    return;
+                }
+
+                // Create a temporary link to download the canvas as PNG
+                const link = document.createElement('a');
+                link.download = 'qr-code-keppler-memorial.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+
+            // Optional: log success
+            console.log('✅ QR code generated successfully for:', QR_URL);
+        })();
+    </script>
+
+</body>
+</html>
