@@ -543,13 +543,40 @@
         }
         
         /* MOBILE HERO CHANGES */
-        .hero-image {
+        #heroBg {
           background-image: url('keppler-headshot.jpg') !important;
           background-size: cover !important;
           background-position: center 20% !important;
-          height: 30vh !important;
+          height: 50vh !important; /* Increased height to fit text+image */
+          width: 100% !important;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          z-index: 1 !important;
           filter: none !important;
           opacity: 0.7 !important;
+        }
+        .hero-content {
+          position: absolute !important;
+          z-index: 10 !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          padding-bottom: 2rem !important;
+        }
+        .hero-shade {
+          position: absolute !important;
+          z-index: 2 !important;
+          top: 0 !important;
+          left: 0 !important;
+          right: 0 !important;
+          bottom: 0 !important;
+        }
+        .hero {
+          position: relative !important;
+          height: 100vh !important; /* Fills the full screen so image overlaps text */
+          display: flex !important;
+          align-items: flex-end !important; /* Pushes text to the bottom of the screen */
         }
       }
       
@@ -592,7 +619,7 @@
       <!-- HERO SECTION -->
       <section class="hero" id="top">
         <!-- BACKGROUND IMAGE DIV -->
-        <div class="hero-image" role="img" aria-label="Dr. James Keppler, D.C. smiling warmly in his chiropractic office"></div>
+        <div id="heroBg" class="hero-image" role="img" aria-label="Dr. James Keppler, D.C. smiling warmly in his chiropractic office"></div>
         
         <!-- GRADIENT OVERLAY -->
         <div class="hero-shade"></div>
