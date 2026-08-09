@@ -633,8 +633,15 @@
       </aside>
 
       <!-- HERO SECTION -->
-      <section class="hero" id="top">
-        <img class="hero-image" src="keppler-headshot.jpg" alt="Dr. James Keppler, D.C." />
+        <section class="hero" id="top">
+        <!-- Responsive Image: Center crop for mobile, Right crop for desktop -->
+        <img 
+          class="hero-image" 
+          src="dr-keppler-center.jpg" 
+          srcset="dr-keppler-center.jpg 600w, dr-keppler-right.jpg 1200w"
+          sizes="(max-width: 768px) 100vw, 100vw"
+          alt="Dr. James Keppler, D.C. - In Loving Memory" 
+        />
         <div class="hero-shade"></div>
         <div class="hero-content">
           <p class="eyebrow">In loving memory</p>
