@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Dr. Keppler Memorial Event and Sale — honoring a life spent healing Sacramento." />
+    <meta name="description" content="Dr. Keppler Memorial — honoring his legacy and keeping his practice alive for the Sacramento community." />
     <meta name="theme-color" content="#9e4e32" />
-    <meta property="og:title" content="Dr. Keppler Memorial Event | Vell's Variety" />
-    <meta property="og:description" content="A celebration of a life spent healing Sacramento — take home a piece of his legacy." />
-    <meta property="og:image" content="fashion.jpg" />
+    <meta property="og:title" content="Dr. Keppler Memorial | Keeping His Legacy Alive" />
+    <meta property="og:description" content="Honoring Dr. Keppler's life of healing — donations and keepsake sales help keep his practice serving the community." />
+    <meta property="og:image" content="Chiro_Spot.jpg" />
     <meta property="og:type" content="website" />
-    <title>Dr. Keppler Memorial Event | Vell's Variety</title>
+    <title>Dr. Keppler Memorial | Keeping His Legacy Alive</title>
     <link rel="icon" href="favicon.svg" />
     
     <style>
@@ -109,33 +109,6 @@
       
       .announcement-content strong {
         font-weight: 700;
-      }
-      
-      .announcement-content a {
-        color: #9e4e32;
-        font-weight: 700;
-        text-decoration: underline;
-      }
-      
-      .announcement-content a:hover {
-        color: #7d3d27;
-      }
-      
-      /* Location Alert */
-      .location-alert {
-        background: #171512;
-        color: #f0e6d8;
-        padding: 0.6rem 1.5rem;
-        text-align: center;
-        font-size: 0.9rem;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.5rem 1rem;
-      }
-      
-      .location-alert strong {
-        color: #f5c542;
       }
       
       /* Hero */
@@ -262,9 +235,10 @@
       .intro p {
         color: #555;
         font-size: 1rem;
+        line-height: 1.6;
       }
       
-      /* Memorial Image Section */
+      /* Memorial Content */
       .memorial-section {
         max-width: 1000px;
         margin: 1.5rem auto;
@@ -274,14 +248,14 @@
       .memorial-section img {
         width: 100%;
         height: auto;
-        border-radius: 16px;
+        border-radius: 16px 16px 0 0;
         box-shadow: 0 8px 24px rgba(0,0,0,0.08);
         display: block;
       }
       
       .memorial-caption {
         background: #f9f6f0;
-        padding: 1.5rem 2rem;
+        padding: 2rem 2rem 2.5rem;
         border-radius: 0 0 16px 16px;
         border: 1px solid #e5ddd5;
         border-top: none;
@@ -295,27 +269,69 @@
         margin-bottom: 0.5rem;
       }
       
+      .memorial-caption .subtitle {
+        color: #9e4e32;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+      
       .memorial-caption p {
-        color: #555;
+        color: #444;
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.8;
         max-width: 700px;
-        margin: 0 auto;
+        margin: 0 auto 1rem auto;
       }
       
       .memorial-caption .fundraiser {
         background: #f5c542;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        margin-top: 1rem;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-top: 1.5rem;
         font-weight: 600;
         color: #1a1a1a;
       }
       
       .memorial-caption .fundraiser strong {
         display: block;
-        font-size: 1.1rem;
-        margin-bottom: 0.25rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #1a1a1a;
+      }
+      
+      .memorial-caption .fundraiser p {
+        color: #1a1a1a;
+        margin: 0 auto;
+        font-weight: 400;
+        max-width: 600px;
+      }
+      
+      .memorial-caption .fundraiser .highlight {
+        font-weight: 700;
+        color: #9e4e32;
+        font-size: 1.05rem;
+        margin-top: 0.75rem;
+        display: block;
+      }
+      
+      /* Back Link */
+      .back-link {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      
+      .back-link a {
+        color: #9e4e32;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+      
+      .back-link a:hover {
+        text-decoration: underline;
       }
       
       /* Visit Section */
@@ -498,10 +514,13 @@
           font-size: 0.9rem;
         }
         .memorial-caption {
-          padding: 1rem;
+          padding: 1.25rem;
         }
         .memorial-caption h2 {
           font-size: 1.4rem;
+        }
+        .memorial-caption .fundraiser {
+          padding: 1rem;
         }
       }
     </style>
@@ -522,32 +541,24 @@
       <!-- Announcement Banner -->
       <aside class="announcement-banner" aria-label="Important announcement about the memorial event">
         <div class="announcement-content">
-          <p><strong>🕊️ Dr. Keppler Memorial Event &amp; Sale</strong></p>
-          <p><strong>August 15–20 · 10 AM–6 PM</strong> — Stop by to honor his legacy and take home a piece of his life's work.</p>
+          <p><strong>🕊️ Dr. Keppler Memorial</strong></p>
+          <p>Honoring his legacy — donations and keepsake sales help keep his practice serving the community.</p>
         </div>
       </aside>
 
-      <!-- Location Alert -->
-      <aside class="location-alert" aria-label="Location announcement">
-        <strong>📍 5667 Freeport Blvd, Sacramento</strong>
-        <span>Enter through the chiropractor door</span>
-        <span>Open 7 days a week · 10 AM–6 PM</span>
-      </aside>
-
-      <!-- HERO SECTION — using original fashion.jpg image -->
+      <!-- HERO SECTION -->
       <section class="hero" id="top">
-        <img class="hero-image" src="fashion.jpg" alt="Vell's Variety — clothing and goods on display" />
+        <img class="hero-image" src="Chiro_Spot.jpg" alt="Dr. Keppler's chiropractic office — a place of healing for over five decades" />
         <div class="hero-shade"></div>
         <div class="hero-content">
           <p class="eyebrow">In loving memory</p>
           <h1>Dr. James Keppler, D.C.</h1>
           <p class="hero-copy">
-            He healed with his hands, taught with his heart, and left a legacy of wellness and compassion.<br />
-            <strong style="color:#f5c542;">Memorial Event &amp; Sale · August 15–20</strong>
+            He healed with his hands, taught with his heart, and left a legacy of wellness and compassion.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#memorial">Learn more</a>
-            <a class="button button-secondary" href="tel:+19164101976">Call the store</a>
+            <a class="button button-primary" href="#memorial">Learn More</a>
+            <a class="button button-secondary" href="tel:+19164101976">Call the Store</a>
           </div>
         </div>
       </section>
@@ -555,45 +566,68 @@
       <!-- INTRO -->
       <section class="intro">
         <p class="eyebrow dark">A life of healing, teaching &amp; care</p>
-        <h2>A celebration of a life spent healing Sacramento</h2>
+        <h2>Honoring a life spent healing Sacramento</h2>
         <p>
           For more than five decades, Dr. Keppler helped thousands stand straighter, breathe deeper and live pain‑free. His office was a sanctuary of learning, laughter and care — and for many, a second home.
         </p>
+        <p style="margin-top:1rem;">
+          His unexpected loss has left a void in our community. But his legacy doesn't have to end here.
+        </p>
       </section>
 
-      <!-- ★ MEMORIAL IMAGE + FUNDRAISER MESSAGE ★ -->
+      <!-- ★ MEMORIAL SECTION ★ -->
       <section class="memorial-section" id="memorial">
         <img src="DrKeppler-InMemoriam.jpg" alt="In loving memory of Dr. James Keppler, D.C. — He healed with his hands, taught with his heart, and left a legacy of wellness and compassion." />
         <div class="memorial-caption">
-          <h2>🕊️ Dr. Keppler Memorial Event &amp; Sale</h2>
+          <h2>🕊️ Dr. Keppler Memorial</h2>
+          <p class="subtitle">Keeping his legacy alive for the community he loved</p>
+
           <p>
-            Books, models, teaching materials, vintage chiropractic tools and personal items will be available.<br />
-            <strong>Take home a piece of his legacy.</strong>
+            <strong>We are heartbroken by the unexpected loss of Dr. Keppler.</strong> 
+            He was more than a chiropractor — he was a teacher, a mentor, and a friend 
+            to generations of Sacramento families.
           </p>
+
+          <p>
+            To honor his memory and continue his life's work, we are raising funds to 
+            keep this practice open and serving the community. Your donations and 
+            purchases of keepsakes from his office will help us:
+          </p>
+
+          <ul style="text-align:left; max-width:500px; margin:0.5rem auto 1rem auto; color:#444; line-height:1.8; list-style-type:none; padding-left:0;">
+            <li style="padding:0.25rem 0;">✓ Keep the doors open during this transition</li>
+            <li style="padding:0.25rem 0;">✓ Interview and welcome new practitioners</li>
+            <li style="padding:0.25rem 0;">✓ Expand services to better serve Dr. Keppler's long-time patients</li>
+            <li style="padding:0.25rem 0;">✓ Welcome new patients seeking compassionate care</li>
+          </ul>
 
           <div class="fundraiser">
             <strong>💛 Help us keep his legacy alive</strong>
-            <p style="margin:0; font-weight:400; color:#333;">
-              This fundraiser helps cover the cost of operations and supports our search for new talent as we work to keep this practice location open for the community.
+            <p>
+              Every donation and keepsake purchase helps cover operational costs and 
+              supports our search for new talent to continue Dr. Keppler's mission of 
+              healing and compassionate care.
             </p>
-            <p style="margin:0.5rem 0 0 0; font-weight:700; color:#9e4e32;">
-              Stop by to shop, or donate to honor his legacy.
-            </p>
+            <span class="highlight">Stop by to shop, or donate to honor his legacy.</span>
           </div>
         </div>
       </section>
 
       <!-- STOREFRONT IMAGE WITH OVERLAY -->
-      <div class="storefront-wrapper" style="max-width:1000px; margin:1.5rem auto; padding:0 1.5rem;">
+      <div style="max-width:1000px; margin:1.5rem auto; padding:0 1.5rem;">
         <div style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
-          <img src="Vells_Variety_Store.jpg" alt="Vell's Variety storefront on Freeport Boulevard - enter under the chiropractor sign" style="width:100%; display:block;" />
+          <img src="Chiro_Spot.jpg" alt="Dr. Keppler's chiropractic office — enter here to support his legacy" style="width:100%; display:block;" />
           <div style="position:absolute; bottom:0; left:0; right:0; padding:2rem 1.5rem 1.75rem; background:linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0) 100%);">
             <span style="display:inline-block; background:#f5c542; color:#1a1a1a; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; padding:0.2rem 0.75rem; border-radius:20px; margin-bottom:0.5rem;">📍 How to find us</span>
             <h3 style="color:#fff; font-size:1.4rem; font-weight:700; margin:0 0 0.25rem 0; line-height:1.2; text-shadow:0 2px 8px rgba(0,0,0,0.6);">Enter through the <span style="color:#f5c542;">CHIROPRACTOR</span> door</h3>
-            <p style="color:rgba(255,255,255,0.9); font-size:0.95rem; margin:0; text-shadow:0 1px 4px rgba(0,0,0,0.5);">We're inside Vell's Variety — keeping this space alive 💛</p>
-            <p style="color:rgba(255,255,255,0.6); font-size:0.8rem; margin-top:0.4rem; font-style:italic;">🚗 (That's the owner's car — he's always here!)</p>
+            <p style="color:rgba(255,255,255,0.9); font-size:0.95rem; margin:0; text-shadow:0 1px 4px rgba(0,0,0,0.5);">Stop by to honor Dr. Keppler's legacy 💛</p>
           </div>
         </div>
+      </div>
+
+      <!-- BACK LINK -->
+      <div class="back-link">
+        <a href="index.html">← Back to Vell's Variety</a>
       </div>
 
       <!-- VISIT / SHOP LOCAL SECTION -->
@@ -602,8 +636,8 @@
           <img src="finds.jpg" alt="A selection of merchandise at Vell's Variety" />
         </div>
         <div class="visit-copy">
-          <p class="eyebrow">Shop local in Sacramento</p>
-          <h2>Stop by Vell's Variety</h2>
+          <p class="eyebrow">Visit us in Sacramento</p>
+          <h2>Stop by and honor his legacy</h2>
           <address>
             <strong>5667 Freeport Blvd</strong><br />
             Sacramento, CA 95822
