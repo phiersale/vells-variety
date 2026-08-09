@@ -111,35 +111,32 @@
         font-weight: 700;
       }
       
-      /* Hero */
+       /* Hero */
       .hero {
         position: relative;
         overflow: hidden;
         background: #171512;
-        min-height: 60vh;
-        max-height: 70vh;
+        min-height: 70vh;
       }
       
-      /* DESKTOP HERO IMAGE (Background) */
       .hero-image {
         width: 100%;
-        height: 100%;
+        height: 70vh;
+        min-height: 70vh;
         object-fit: cover;
-        object-position: center center;
-        opacity: 0.5;
-        filter: blur(4px) brightness(0.6);
-        transform: scale(1.05);
+        object-position: center 30%;
+        opacity: 0.7;
       }
       
       .hero-shade {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to top, rgba(23, 21, 18, 0.8) 20%, transparent 70%);
+        background: linear-gradient(to top, rgba(23, 21, 18, 0.85) 15%, transparent 60%);
       }
       
       .hero-content {
         position: absolute;
-        bottom: 0;
+        bottom: 2rem;
         left: 0;
         right: 0;
         padding: 2rem 1.5rem 2.5rem;
@@ -527,28 +524,48 @@
           justify-content: center;
         }
         .hero {
-          min-height: 50vh;
-          max-height: 60vh;
+          min-height: 85vh;
+          max-height: none;
         }
         .hero-image {
-          opacity: 0.4;
-          filter: blur(6px) brightness(0.5);
+          height: 85vh;
+          min-height: 85vh;
+          object-position: center 25%;
+          filter: none;
+          transform: none;
         }
-        .hero-content h1 {
-          font-size: 1.6rem;
+        .hero-shade {
+          background: linear-gradient(to top, rgba(23, 21, 18, 0.9) 20%, transparent 50%);
         }
         .hero-content {
-          padding: 1.5rem 1rem 2rem;
+          padding: 2.5rem 1rem 2rem;
+          bottom: 0.5rem;
         }
-        .hero-copy {
-          font-size: 0.9rem;
+        .hero-content h1 {
+          font-size: 2rem;
         }
-        .hero-actions .button {
-          font-size: 0.85rem;
-          padding: 0.6rem 1.2rem;
+        .hero-content .hero-copy {
+          font-size: 0.95rem;
+        }
+        .hero-content .eyebrow {
+          font-size: 0.7rem;
         }
         .announcement-content p {
           font-size: 0.9rem;
+        }
+        .category-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.75rem;
+          padding: 0.75rem;
+        }
+        .finds-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .ebay-feed h2 {
+          font-size: 1.6rem;
+        }
+        .inventory-notice h2 {
+          font-size: 1.6rem;
         }
         .memorial-caption {
           padding: 1.25rem;
