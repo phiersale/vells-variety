@@ -284,6 +284,42 @@
         margin: 0 auto 1rem auto;
       }
       
+      /* --- NEW MAP STYLES --- */
+      .map-wrapper {
+        margin: 1.5rem auto;
+        width: 100%;
+        max-width: 600px; /* Keeps map smaller on Desktop */
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        background: #ede5dc;
+      }
+      
+      .map-wrapper iframe {
+        width: 100%;
+        height: 280px;
+        border: none;
+        display: block;
+      }
+      
+      .map-action {
+        display: block;
+        background: #9e4e32;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.6rem;
+        text-align: center;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+      
+      .map-action:hover {
+        background: #7a3b26;
+      }
+      
+      /* --- END NEW MAP STYLES --- */
+      
       .memorial-caption .fundraiser {
         background: #f5c542;
         padding: 1.5rem;
@@ -577,7 +613,14 @@
 
       <!-- ★ MEMORIAL SECTION ★ -->
       <section class="memorial-section" id="memorial">
-        <img src="DrKeppler-InMemoriam.jpg" alt="In loving memory of Dr. James Keppler, D.C. — He healed with his hands, taught with his heart, and left a legacy of wellness and compassion." />
+        <!-- REPLACED IMAGE WITH MAP HERE -->
+        <div class="map-wrapper">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3121.701691053468!2d-121.50084862339737!3d38.52263147180387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ad3735ded546b%3A0x8b51af7c9cc69a1f!2s5667%20Freeport%20Blvd%2C%20Sacramento%2C%20CA%2095822!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://www.google.com/maps/place/5667+Freeport+Blvd,+Sacramento,+CA+95822" target="_blank" rel="noreferrer" class="map-action">
+            Get Directions to Our Location →
+          </a>
+        </div>
+
         <div class="memorial-caption">
           <h2>🕊️ Dr. Keppler Memorial</h2>
           <p class="subtitle">Keeping his legacy alive for the community he loved</p>
@@ -590,8 +633,7 @@
 
           <p>
             To honor his memory and continue his life's work, we are raising funds to 
-            keep this practice open and serving the community. Your donations and 
-            purchases of keepsakes from his office will help us:
+            keep this practice open and serving the community. Your donations and purchases of keepsakes from his office will help us:
           </p>
 
           <ul style="text-align:left; max-width:500px; margin:0.5rem auto 1rem auto; color:#444; line-height:1.8; list-style-type:none; padding-left:0;">
@@ -604,9 +646,7 @@
           <div class="fundraiser">
             <strong>💛 Help us keep his legacy alive</strong>
             <p>
-              Every donation and keepsake purchase helps cover operational costs and 
-              supports our search for new talent to continue Dr. Keppler's mission of 
-              healing and compassionate care.
+              The keepsakes from his legacy are on <strong>sale and display between August 15th and 20th</strong>. All proceeds will go directly to keeping our doors open and serving the community, as he would have wanted it.
             </p>
             <span class="highlight">Stop by to shop, or donate to honor his legacy.</span>
           </div>
