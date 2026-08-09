@@ -541,14 +541,6 @@
           padding: 1rem;
         }
         
-        /* MOBILE HERO CHANGES */
-        .hero-image {
-          height: 30vh; /* 1/3rd screen height */
-          object-fit: cover;
-          object-position: 50% 15%; /* Crops out torso */
-          filter: none; /* Removes blur for crispness */
-          opacity: 0.7;
-        }
       }
       
       /* Smaller Tablet adjustments */
@@ -589,7 +581,7 @@
 
       <!-- HERO SECTION -->
       <section class="hero" id="top">
-       <picture><source media="(max-width:600px)" srcset="keppler-headshot.jpg"><img class="hero-image" src="keppler-enhanced.jpg" alt="Dr. James Keppler, D.C. smiling warmly in his chiropractic office" /></picture>
+             <picture><source media="(max-width:600px)" srcset="keppler-headshot.jpg"><img class="hero-image" src="keppler-enhanced.jpg" style="height:70vh; object-fit:cover; object-position:50% 15%; filter:blur(2px) contrast(1.05); opacity:0.7;" onload="if(window.innerWidth<=600){this.style.height='30vh'; this.style.objectPosition='50% 20%'; this.style.filter='none';}" alt="Dr. James Keppler, D.C. smiling warmly in his chiropractic office" /></picture>
         <div class="hero-shade"></div>
         <div class="hero-content">
           <p class="eyebrow">In loving memory</p>
