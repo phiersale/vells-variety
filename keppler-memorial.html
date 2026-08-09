@@ -543,19 +543,6 @@
         }
         
         /* MOBILE HERO CHANGES */
-        #heroBg {
-          background-image: url('keppler-headshot.jpg') !important;
-          background-size: cover !important;
-          background-position: center 20% !important;
-          height: 50vh !important; /* Increased height to fit text+image */
-          width: 100% !important;
-          position: absolute !important;
-          top: 0 !important;
-          left: 0 !important;
-          z-index: 1 !important;
-          filter: none !important;
-          opacity: 0.7 !important;
-        }
         .hero-content {
           position: absolute !important;
           z-index: 10 !important;
@@ -574,9 +561,9 @@
         }
         .hero {
           position: relative !important;
-          height: 100vh !important; /* Fills the full screen so image overlaps text */
-          display: flex !important;
-          align-items: flex-end !important; /* Pushes text to the bottom of the screen */
+          height: auto !important; /* Let the image control the height */
+          display: block !important; /* Stop forcing flex on the container */
+          min-height: 70vh !important; /* Ensure enough room for the text */
         }
       }
       
