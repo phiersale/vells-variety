@@ -618,8 +618,8 @@
 
       <!-- HERO SECTION -->
       <section class="hero" id="top">
-        <!-- BACKGROUND IMAGE DIV -->
-        <div id="heroBg" class="hero-image" role="img" aria-label="Dr. James Keppler, D.C. smiling warmly in his chiropractic office"></div>
+        <!-- THE MOBILE HEADSHOT (FORCED VIA JAVASCRIPT) -->
+        <img id="heroImg" src="keppler-enhanced.jpg" alt="Dr. James Keppler, D.C." style="width:100%; height:35vh; object-fit:cover; object-position:50% 20%; opacity:0.7; filter:blur(2px);">
         
         <!-- GRADIENT OVERLAY -->
         <div class="hero-shade"></div>
@@ -637,6 +637,13 @@
           </div>
         </div>
       </section>
+
+      <!-- FORCE HEADSHOT SWAP BEFORE THE PAGE EVEN FINISHES LOADING -->
+      <script>
+        if (window.innerWidth <= 600) {
+          document.getElementById("heroImg").src = "keppler-headshot.jpg";
+        }
+      </script>
 
       <!-- INTRO -->
       <section class="intro">
