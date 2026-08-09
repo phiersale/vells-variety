@@ -603,10 +603,10 @@
         </div>
       </aside>
 
-            <!-- HERO SECTION -->
+           <!-- HERO SECTION -->
       <section class="hero" id="top">
-        <!-- BACKGROUND IMAGE DIV (Pure CSS swap - no JavaScript) -->
-        <div id="heroBg" class="hero-image" role="img" aria-label="Dr. James Keppler, D.C. smiling warmly in his chiropractic office"></div>
+        <!-- THE MOBILE HEADSHOT (FORCED VIA JAVASCRIPT) -->
+        <img id="heroImg" class="hero-image" src="keppler-enhanced.jpg" alt="Dr. James Keppler, D.C.">
         
         <!-- GRADIENT OVERLAY -->
         <div class="hero-shade"></div>
@@ -624,6 +624,13 @@
           </div>
         </div>
       </section>
+
+      <!-- FORCE HEADSHOT SWAP BEFORE THE PAGE EVEN FINISHES LOADING -->
+      <script>
+        if (window.innerWidth <= 600) {
+          document.getElementById("heroImg").src = "keppler-headshot.jpg";
+        }
+      </script>
 
       <!-- INTRO -->
       <section class="intro">
