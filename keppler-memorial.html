@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1200, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Dr. Keppler Memorial — honoring his legacy and keeping his practice alive for the Sacramento community." />
     <meta name="theme-color" content="#9e4e32" />
     <meta property="og:title" content="Dr. Keppler Memorial | Keeping His Legacy Alive" />
@@ -542,7 +542,10 @@
           padding: 1rem;
         }
         
-        /* MOBILE HERO CHANGES */
+              /* MOBILE HERO CHANGES */
+        .hero-image {
+          height: 70vh !important; /* Makes it tall enough on mobile */
+        }
         .hero-content {
           position: absolute !important;
           z-index: 10 !important;
@@ -561,9 +564,9 @@
         }
         .hero {
           position: relative !important;
-          height: auto !important; /* Let the image control the height */
-          display: block !important; /* Stop forcing flex on the container */
-          min-height: 70vh !important; /* Ensure enough room for the text */
+          height: auto !important; 
+          display: block !important; 
+          min-height: 70vh !important; 
         }
       }
       
