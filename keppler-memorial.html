@@ -118,16 +118,14 @@
         background: #171512;
       }
       
-      /* HERO IMAGE - Desktop Blur */
+      /* HERO IMAGE - Desktop Settings */
       .hero-image {
         width: 100%;
         height: 70vh;
         object-fit: cover;
-        object-position: 50% 15%; /* Focuses on eyes/smile for desktop */
+        object-position: 50% 15%; /* Eyes/smile for desktop */
         opacity: 0.7;
-        /* Blur to smooth pixelation on desktop */
-        filter: blur(2px) contrast(1.05);
-        transition: filter 0.3s ease;
+        filter: blur(2px) contrast(1.05); /* Smooth pixelation */
       }
       
       .hero-shade {
@@ -544,10 +542,11 @@
           padding: 1rem;
         }
         
-        /* MOBILE HERO CHANGES: 1/3 the height, tight zoom on head and shoulders */
+        /* MOBILE HERO CHANGES (Overrides desktop settings) */
         .hero-image {
-          height: 30vh; /* Roughly 1/3rd of a screen */
-          object-position: 50% 20%; /* Zooms in tightly on face/head/shoulders, no torso */
+          height: 30vh !important; /* 1/3rd screen height */
+          object-position: 50% 25% !important; /* Zoom in on head & shoulders only */
+          filter: none !important; /* Remove blur so it's crisp when zoomed in */
         }
       }
       
@@ -595,7 +594,7 @@
           <p class="eyebrow">In loving memory</p>
           <h1>Dr. James Keppler, D.C.</h1>
           <p class="hero-copy">
-            He healed with his hands, taught with his heart, and left a legacy of wellness and compassion. He will be sorely missed.
+            He healed with his hands, taught with his heart, and left a legacy of wellness and compassion.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#memorial">Learn More</a>
