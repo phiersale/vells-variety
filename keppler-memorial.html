@@ -124,14 +124,14 @@
         height: 70vh;
         min-height: 70vh;
         object-fit: cover;
-        object-position: center 30%;
+        object-position: center center;
         opacity: 0.7;
       }
       
       .hero-shade {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to top, rgba(23, 21, 18, 0.85) 15%, transparent 60%);
+        background: linear-gradient(to top right, rgba(23, 21, 18, 0.9) 15%, transparent 55%);
       }
       
       .hero-content {
@@ -228,13 +228,6 @@
         text-align: center;
       }
       
-      .intro h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 0.75rem;
-      }
-      
       .intro p {
         color: #555;
         font-size: 1rem;
@@ -285,6 +278,20 @@
         line-height: 1.8;
         max-width: 700px;
         margin: 0 auto 1rem auto;
+      }
+      
+      .memorial-caption ul {
+        text-align: left;
+        max-width: 500px;
+        margin: 0.5rem auto 1rem auto;
+        color: #444;
+        line-height: 1.8;
+        list-style-type: none;
+        padding-left: 0;
+      }
+      
+      .memorial-caption ul li {
+        padding: 0.25rem 0;
       }
       
       .memorial-caption .fundraiser {
@@ -530,12 +537,12 @@
         .hero-image {
           height: 85vh;
           min-height: 85vh;
-          object-position: center 25%;
+          object-position: center center;
           filter: none;
           transform: none;
         }
         .hero-shade {
-          background: linear-gradient(to top, rgba(23, 21, 18, 0.9) 20%, transparent 50%);
+          background: linear-gradient(to top right, rgba(23, 21, 18, 0.9) 20%, transparent 50%);
         }
         .hero-content {
           padding: 2.5rem 1rem 2rem;
@@ -552,20 +559,6 @@
         }
         .announcement-content p {
           font-size: 0.9rem;
-        }
-        .category-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 0.75rem;
-          padding: 0.75rem;
-        }
-        .finds-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-        .ebay-feed h2 {
-          font-size: 1.6rem;
-        }
-        .inventory-notice h2 {
-          font-size: 1.6rem;
         }
         .memorial-caption {
           padding: 1.25rem;
@@ -633,8 +626,7 @@
       </aside>
 
       <!-- HERO SECTION -->
-        <section class="hero" id="top">
-        <!-- Responsive Image: Center crop for mobile, Right crop for desktop -->
+      <section class="hero" id="top">
         <img 
           class="hero-image" 
           src="dr-keppler-center.jpg" 
@@ -644,10 +636,10 @@
         />
         <div class="hero-shade"></div>
         <div class="hero-content">
-          <p class="eyebrow">In loving memory</p>
+          <p class="eyebrow">In Loving Memory</p>
           <h1>Dr. James Keppler, D.C.</h1>
           <p class="hero-copy">
-            He healed with his hands, taught with his heart, and left a legacy of wellness and compassion.
+            He healed with his hands, taught with his heart, and built a legacy of compassion and care.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#memorial">Learn More</a>
@@ -656,15 +648,13 @@
         </div>
       </section>
 
-      <!-- INTRO -->
+      <!-- TRIBUTE TEXT -->
       <section class="intro">
-        <p class="eyebrow dark">A life of healing, teaching &amp; care</p>
-        <h2>Honoring a life spent healing Sacramento</h2>
         <p>
-          For more than five decades, Dr. Keppler helped thousands stand straighter, breathe deeper and live pain‑free. His office was a sanctuary of learning, laughter and care — and for many, a second home.
+          For more than five decades, Dr. Keppler helped thousands stand straighter, breathe easier, and live without pain. His office was a place of learning, laughter, and comfort — a second home for many in Sacramento.
         </p>
         <p style="margin-top:1rem;">
-          His unexpected loss has left a void in our community. But his legacy doesn't have to end here.
+          His unexpected passing leaves a profound void. But the work he devoted his life to doesn’t have to end.
         </p>
       </section>
 
@@ -673,33 +663,27 @@
         <img src="DrKeppler-InMemoriam.jpg" alt="In loving memory of Dr. James Keppler, D.C. — He healed with his hands, taught with his heart, and left a legacy of wellness and compassion." />
         <div class="memorial-caption">
           <h2>🕊️ Dr. Keppler Memorial</h2>
-          <p class="subtitle">Keeping his legacy alive for the community he loved</p>
+          <p class="subtitle">Keeping the practice alive for the community he loved</p>
 
           <p>
-            <strong>We are heartbroken by the unexpected loss of Dr. Keppler.</strong> 
-            He was more than a chiropractor — he was a teacher, a mentor, and a friend 
-            to generations of Sacramento families.
+            Dr. Keppler was more than a chiropractor — he was a mentor, a teacher, and a steady presence for generations of families. To honor his memory and continue serving his patients, we are raising funds to keep the practice open during this transition.
           </p>
 
-          <p>
-            To honor his memory and continue his life's work, we are raising funds to 
-            keep this practice open and serving the community. Your donations and 
-            purchases of keepsakes from his office will help us:
-          </p>
+          <p>Your support will help us:</p>
 
-          <ul style="text-align:left; max-width:500px; margin:0.5rem auto 1rem auto; color:#444; line-height:1.8; list-style-type:none; padding-left:0;">
-            <li style="padding:0.25rem 0;">✓ Keep the doors open during this transition</li>
-            <li style="padding:0.25rem 0;">✓ Interview and welcome new practitioners</li>
-            <li style="padding:0.25rem 0;">✓ Expand services to better serve Dr. Keppler's long-time patients</li>
-            <li style="padding:0.25rem 0;">✓ Welcome new patients seeking compassionate care</li>
+          <ul>
+            <li>✓ Keep the doors open as we navigate this next chapter</li>
+            <li>✓ Interview and welcome new practitioners</li>
+            <li>✓ Expand services for long‑time patients</li>
+            <li>✓ Continue offering compassionate care to new patients</li>
           </ul>
 
           <div class="fundraiser">
-            <strong>💛 Help us keep his legacy alive</strong>
+            <strong>💛 Honor His Legacy</strong>
             <p>
-              The keepsakes from his legacy are on sale and display between <strong>August 15th and 20th</strong>. All proceeds will go directly to keeping our doors open and serving the community, as he would have wanted it.
+              Keepsakes from Dr. Keppler’s office will be available [Insert Date Range Here]. All proceeds go directly toward sustaining the practice and preserving the care he gave so generously.
             </p>
-            <span class="highlight">Stop by to shop, or donate to honor his legacy.</span>
+            <span class="highlight">Stop by to shop or donate — and help carry his legacy forward.</span>
           </div>
         </div>
       </section>
