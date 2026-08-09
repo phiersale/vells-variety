@@ -118,7 +118,7 @@
         background: #171512;
       }
       
-      /* DESKTOP HERO IMAGE */
+      /* DESKTOP HERO IMAGE (Default) */
       .hero-image {
         width: 100%;
         height: 70vh;
@@ -541,11 +541,11 @@
           padding: 1rem;
         }
         
-        /* STRICTLY ENFORCED MOBILE HERO CHANGES */
+        /* MOBILE HERO CHANGES */
         .hero-image {
-          height: 30vh;
+          height: 30vh; /* 1/3rd screen height */
           object-fit: cover;
-          object-position: 50% 15%; /* Crops out torso to focus on head/shoulders */
+          object-position: 50% 15%; /* Crops out torso */
           filter: none; /* Removes blur for crispness */
           opacity: 0.7;
         }
@@ -587,9 +587,14 @@
         </div>
       </aside>
 
-      <!-- HERO SECTION -->
+      <!-- HERO SECTION - MOBILE USES HEADSHOT, DESKTOP USES FULLER IMAGE -->
       <section class="hero" id="top">
-        <img class="hero-image" src="keppler-enhanced.jpg" alt="Dr. James Keppler, D.C. smiling warmly in his chiropractic office" />
+        <picture>
+          <!-- Show headshot on screens smaller than 600px (Mobile) -->
+          <source media="(max-width: 600px)" srcset="keppler-headshot.jpg">
+          <!-- Default image for Desktop -->
+          <img class="hero-image" src="keppler-enhanced.jpg" alt="Dr. James Keppler, D.C. smiling warmly in his chiropractic office" />
+        </picture>
         <div class="hero-shade"></div>
         <div class="hero-content">
           <p class="eyebrow">In loving memory</p>
@@ -645,9 +650,7 @@
           <div class="fundraiser">
             <strong>💛 Help us keep his legacy alive</strong>
             <p>
-              Every donation and keepsake purchase helps cover operational costs and 
-              supports our search for new talent to continue Dr. Keppler's mission of 
-              healing and compassionate care.
+              The keepsakes from his legacy are on sale and display between <strong>August 15th and 20th</strong>. All proceeds will go directly to keeping our doors open and serving the community, as he would have wanted it.
             </p>
             <span class="highlight">Stop by to shop, or donate to honor his legacy.</span>
           </div>
