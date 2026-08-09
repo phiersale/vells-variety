@@ -587,14 +587,9 @@
         </div>
       </aside>
 
-      <!-- HERO SECTION - MOBILE USES HEADSHOT, DESKTOP USES FULLER IMAGE -->
+      <!-- HERO SECTION -->
       <section class="hero" id="top">
-        <picture>
-          <!-- Show headshot on screens smaller than 600px (Mobile) -->
-          <source media="(max-width: 600px)" srcset="keppler-headshot.jpg">
-          <!-- Default image for Desktop -->
-          <img class="hero-image" src="keppler-enhanced.jpg" alt="Dr. James Keppler, D.C. smiling warmly in his chiropractic office" />
-        </picture>
+        <img id="heroImg" class="hero-image" src="keppler-enhanced.jpg" alt="Dr. James Keppler, D.C. smiling warmly in his chiropractic office" />
         <div class="hero-shade"></div>
         <div class="hero-content">
           <p class="eyebrow">In loving memory</p>
@@ -715,5 +710,17 @@
         <a href="https://www.google.com/maps/search/?api=1&amp;query=5667+Freeport+Blvd+Sacramento+CA+95822" target="_blank" rel="noreferrer">Directions</a>
       </nav>
     </main>
+
+    <!-- JAVASCRIPT: FORCE MOBILE IMAGE SWAP -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // Check if the screen width is less than or equal to 600px (mobile)
+        if (window.innerWidth <= 600) {
+          var heroImage = document.getElementById("heroImg");
+          // Swap the image source to the headshot
+          heroImage.src = "keppler-headshot.jpg";
+        }
+      });
+    </script>
   </body>
 </html>
