@@ -118,12 +118,12 @@
         background: #171512;
       }
       
-      /* HERO IMAGE - Desktop Settings */
+      /* DESKTOP HERO IMAGE */
       .hero-image {
         width: 100%;
         height: 70vh;
         object-fit: cover;
-        object-position: 50% 15%; /* Eyes/smile for desktop */
+        object-position: 50% 15%; /* Eyes and smile */
         opacity: 0.7;
         filter: blur(2px) contrast(1.05); /* Smooth pixelation */
       }
@@ -336,7 +336,7 @@
         text-decoration: underline;
       }
       
-      /* VISIT SECTION - NEW MAP STYLES */
+      /* VISIT SECTION - MAP STYLES */
       .visit {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -348,7 +348,6 @@
         border-radius: 16px;
       }
       
-      /* Replacing image with map container */
       .map-container {
         width: 100%;
         height: 100%;
@@ -542,11 +541,13 @@
           padding: 1rem;
         }
         
-        /* MOBILE HERO CHANGES (Overrides desktop settings) */
+        /* STRICTLY ENFORCED MOBILE HERO CHANGES */
         .hero-image {
-          height: 30vh !important; /* 1/3rd screen height */
-          object-position: 50% 25% !important; /* Zoom in on head & shoulders only */
-          filter: none !important; /* Remove blur so it's crisp when zoomed in */
+          height: 30vh;
+          object-fit: cover;
+          object-position: 50% 15%; /* Crops out torso to focus on head/shoulders */
+          filter: none; /* Removes blur for crispness */
+          opacity: 0.7;
         }
       }
       
@@ -556,7 +557,7 @@
           grid-template-columns: 1fr;
         }
         .map-container {
-          order: -1; /* Map sits on top on tablet too */
+          order: -1;
           min-height: 300px;
         }
         .map-container iframe {
