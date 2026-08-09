@@ -116,19 +116,19 @@
         position: relative;
         overflow: hidden;
         background: #171512;
+        min-height: 60vh;
+        max-height: 70vh;
       }
       
       /* DESKTOP HERO IMAGE (Background) */
-         .hero-image {
+      .hero-image {
         width: 100%;
-        max-width: 1400px; /* Stops the image from stretching too wide */
-        margin: 0 auto;    /* Centers it if the screen is massive */
-        height: 70vh;
-        background-image: url('keppler-headshot.jpg');
-        background-size: cover;
-        background-position: 50% 15%; /* Eyes and smile */
-        opacity: 0.7;
-        filter: blur(2px) contrast(1.05); /* Smooth pixelation */
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        opacity: 0.5;
+        filter: blur(4px) brightness(0.6);
+        transform: scale(1.05);
       }
       
       .hero-shade {
@@ -145,6 +145,7 @@
         padding: 2rem 1.5rem 2.5rem;
         color: #fff;
         max-width: 700px;
+        text-shadow: 0 2px 20px rgba(0,0,0,0.8);
       }
       
       .eyebrow {
@@ -168,7 +169,7 @@
       
       .hero-copy {
         font-size: 1rem;
-        opacity: 0.9;
+        opacity: 0.95;
         max-width: 500px;
         margin-bottom: 1.25rem;
       }
@@ -525,11 +526,26 @@
         .wordmark {
           justify-content: center;
         }
+        .hero {
+          min-height: 50vh;
+          max-height: 60vh;
+        }
+        .hero-image {
+          opacity: 0.4;
+          filter: blur(6px) brightness(0.5);
+        }
         .hero-content h1 {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
         }
         .hero-content {
           padding: 1.5rem 1rem 2rem;
+        }
+        .hero-copy {
+          font-size: 0.9rem;
+        }
+        .hero-actions .button {
+          font-size: 0.85rem;
+          padding: 0.6rem 1.2rem;
         }
         .announcement-content p {
           font-size: 0.9rem;
@@ -543,32 +559,19 @@
         .memorial-caption .fundraiser {
           padding: 1rem;
         }
-        
-        /* MOBILE HERO CHANGES */
-    .hero-image {
-          height: 30vh !important; /* Reduce height to normal proportions on tall phones */
-        }
-        .hero-content {
-          position: absolute !important;
-          z-index: 10 !important;
-          bottom: 0 !important;
-          left: 0 !important;
-          right: 0 !important;
-          padding-bottom: 2rem !important;
-        }
-        .hero-shade {
-          position: absolute !important;
-          z-index: 2 !important;
-          top: 0 !important;
-          left: 0 !important;
-          right: 0 !important;
-          bottom: 0 !important;
-        }
+      }
+      
+      /* Extra small phones (under 400px) */
+      @media (max-width: 400px) {
         .hero {
-          position: relative !important;
-          height: auto !important; 
-          display: block !important; 
-          min-height: 70vh !important; 
+          min-height: 45vh;
+          max-height: 55vh;
+        }
+        .hero-content h1 {
+          font-size: 1.4rem;
+        }
+        .hero-copy {
+          font-size: 0.8rem;
         }
       }
       
@@ -583,6 +586,10 @@
         }
         .map-container iframe {
           min-height: 300px;
+        }
+        .hero {
+          min-height: 55vh;
+          max-height: 65vh;
         }
       }
     </style>
@@ -608,18 +615,13 @@
         </div>
       </aside>
 
-         <!-- HERO SECTION -->
+      <!-- HERO SECTION -->
       <section class="hero" id="top">
-        <!-- THE HEADSHOT IMAGE FOR ALL SCREENS -->
-        <img id="heroImg" class="hero-image" src="keppler-headshot.jpg" alt="Dr. James Keppler, D.C.">
-        
-        <!-- GRADIENT OVERLAY -->
+        <img class="hero-image" src="keppler-headshot.jpg" alt="Dr. James Keppler, D.C." />
         <div class="hero-shade"></div>
-        
-        <!-- TEXT CONTENT & BUTTONS -->
         <div class="hero-content">
           <p class="eyebrow">In loving memory</p>
-          <h1>Dr. James Keppler, D.C.</h1> 
+          <h1>Dr. James Keppler, D.C.</h1>
           <p class="hero-copy">
             He healed with his hands, taught with his heart, and left a legacy of wellness and compassion.
           </p>
@@ -629,13 +631,6 @@
           </div>
         </div>
       </section>
-
-      <!-- FORCE HEADSHOT SWAP BEFORE THE PAGE EVEN FINISHES LOADING -->
-      <script>
-        if (window.innerWidth <= 600) {
-          document.getElementById("heroImg").src = "keppler-headshot.jpg";
-        }
-      </script>
 
       <!-- INTRO -->
       <section class="intro">
