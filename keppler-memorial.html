@@ -118,13 +118,16 @@
         background: #171512;
       }
       
-      /* UPDATED HERO IMAGE TO CROP TO FACE ON DESKTOP */
+      /* HERO IMAGE - Desktop Blur and Mobile Crop adjustments */
       .hero-image {
         width: 100%;
         height: 70vh;
         object-fit: cover;
-        object-position: 50% 15%; /* Focuses on the eyes and smile */
+        object-position: 50% 15%; /* Focuses on eyes/smile for desktop */
         opacity: 0.7;
+        /* Blur to smooth pixelation on desktop */
+        filter: blur(2px) contrast(1.05);
+        transition: filter 0.3s ease;
       }
       
       .hero-shade {
@@ -442,19 +445,6 @@
         text-decoration: underline;
       }
       
-      @media (max-width: 700px) {
-        .visit {
-          grid-template-columns: 1fr;
-        }
-        .map-container {
-          order: -1; /* Map sits on top on mobile */
-          min-height: 300px;
-        }
-        .map-container iframe {
-          min-height: 300px;
-        }
-      }
-      
       /* Footer */
       footer {
         background: #171512;
@@ -518,6 +508,7 @@
         background: #ede5dc;
       }
       
+      /* --- MOBILE SPECIFIC OVERRIDES --- */
       @media (max-width: 600px) {
         .mobile-actions {
           display: flex;
@@ -552,9 +543,25 @@
         .memorial-caption .fundraiser {
           padding: 1rem;
         }
-        /* On mobile, crop less so we see more of him */
+        
+        /* MOBILE HERO CHANGES: Half as tall, zoomed in on face */
         .hero-image {
-          object-position: 50% 30%;
+          height: 40vh; /* Half the original height */
+          object-position: 50% 25%; /* Zooms in closer to eyes and smile */
+        }
+      }
+      
+      /* Smaller Tablet adjustments */
+      @media (min-width: 601px) and (max-width: 900px) {
+        .visit {
+          grid-template-columns: 1fr;
+        }
+        .map-container {
+          order: -1; /* Map sits on top on tablet too */
+          min-height: 300px;
+        }
+        .map-container iframe {
+          min-height: 300px;
         }
       }
     </style>
@@ -580,7 +587,7 @@
         </div>
       </aside>
 
-      <!-- HERO SECTION - Updated with keppler-enhanced.jpg, dimmed, and cropped to focus on his smile/eyes -->
+      <!-- HERO SECTION -->
       <section class="hero" id="top">
         <img class="hero-image" src="keppler-enhanced.jpg" alt="Dr. James Keppler, D.C. smiling warmly in his chiropractic office" />
         <div class="hero-shade"></div>
@@ -609,7 +616,7 @@
         </p>
       </section>
 
-      <!-- ★ MEMORIAL SECTION ★ - RESTORED ORIGINAL IMAGE AND IN MEMORIAM MESSAGE -->
+      <!-- ★ MEMORIAL SECTION ★ -->
       <section class="memorial-section" id="memorial">
         <img src="DrKeppler-InMemoriam.jpg" alt="In loving memory of Dr. James Keppler, D.C. — He healed with his hands, taught with his heart, and left a legacy of wellness and compassion." />
         <div class="memorial-caption">
@@ -647,7 +654,7 @@
         </div>
       </section>
 
-      <!-- STOREFRONT IMAGE WITH OVERLAY - Keeping this as is -->
+      <!-- STOREFRONT IMAGE WITH OVERLAY -->
       <div style="max-width:1000px; margin:1.5rem auto; padding:0 1.5rem;">
         <div style="position:relative; border-radius:16px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.08);">
           <img src="Chiro_Spot.jpg" alt="Dr. Keppler's chiropractic office — enter here to support his legacy" style="width:100%; display:block;" />
@@ -664,9 +671,9 @@
         <a href="index.html">← Back to Vell's Variety</a>
       </div>
 
-      <!-- VISIT / SHOP LOCAL SECTION - REPLACED IMAGE WITH MAP -->
+      <!-- VISIT / SHOP LOCAL SECTION - MAP REPLACES IMAGE -->
       <section class="visit">
-        <!-- MAP CONTAINER (Replaces the 'finds.jpg' image) -->
+        <!-- MAP CONTAINER -->
         <div class="map-container">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3121.701691053468!2d-121.50084862339737!3d38.52263147180387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ad3735ded546b%3A0x8b51af7c9cc69a1f!2s5667%20Freeport%20Blvd%2C%20Sacramento%2C%20CA%2095822!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           <a class="map-link-bar" href="https://www.google.com/maps/place/5667+Freeport+Blvd,+Sacramento,+CA+95822" target="_blank" rel="noreferrer">Get Driving Directions →</a>
